@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int cont = 1;
+        int de = 0;
+        do {
+        System.out.print("Digite 2 valores: ");
+        double n1 = sc.nextDouble();
+        double n2 = sc.nextDouble();
+        System.out.println("Escolha uma opcao:");
+        System.out.println("1 - Somar");
+        System.out.println("2- Subtrair");
+        System.out.println("3 - Multiplicar");
+        System.out.println("4 - Dividir");
+        int ope = sc.nextInt();
+        while (cont >0){
+        if (ope >=1 && ope<=4){
+            if (1==ope){
+                double som = n1 + n2;
+                System.out.println("A Soma e: "+ som);
+                System.out.println("repetir denovo?");
+                System.out.println("sim = 0");
+                System.out.println("não = 1");
+                de = sc.nextInt();
+                break;
+            } else if (2==ope) {
+                double sub = n1-n2;
+                System.out.println("A subtracao e: "+sub);
+                System.out.println("repetir denovo?");
+                System.out.println("sim = 0");
+                System.out.println("não = 1");
+                de = sc.nextInt();
+                break;
+            } else if (3==ope){
+                double mut = n1*n2;
+                System.out.println("A multiplicacao e: "+mut);
+                System.out.println("repetir denovo?");
+                System.out.println("sim = 0");
+                System.out.println("não = 1");
+                de = sc.nextInt();
+                break;
+            } else {
+                double div = n1/n2;
+                System.out.println("A divisao e: "+div);
+                System.out.println("repetir denovo?");
+                System.out.println("sim = 0");
+                System.out.println("não = 1");
+                de = sc.nextInt();
+                break;
+            }
+
+        } else {
+            System.out.println("Coloque um valor valido");
+            ope = sc.nextInt();
+        }
+    }
+} while(de == 0 );
+    }
+}
